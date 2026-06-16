@@ -1,15 +1,8 @@
-pipeline {
-  agent any
-  stages {
-    stage('Checkout') {
-      steps {
-        git url: 'https://github.com/Gaurav050202/Gaurav-TEST.git'
-      }
-    }
-    stage('Build') {
-      steps {
-        sh 'echo Building...'
-      }
-    }
+node {
+  stage('Checkout') {
+    git url: 'https://github.com/Gaurav050202/Gaurav-TEST.git'
+  }
+  stage('Build') {
+    sh 'echo Building...'
   }
 }
