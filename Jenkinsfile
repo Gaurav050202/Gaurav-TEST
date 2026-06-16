@@ -1,8 +1,9 @@
 node {
   stage('Checkout') {
-    git url: 'https://github.com/Gaurav050202/Gaurav-TEST.git'
+    git branch: 'main', url: 'https://github.com/Gaurav050202/Gaurav-TEST.git'
   }
+
   stage('Build') {
-    sh 'echo Building...'
+    bat 'echo Building...'   // use bat on Windows, sh is for Linux
   }
 }
